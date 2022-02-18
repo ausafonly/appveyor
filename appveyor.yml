@@ -3,7 +3,7 @@ services:
   - SQL2019
 install:
   - ps: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-  - ps: Install-Module -Name SqlServer -AllowClobber
+  - ps: Install-Module -Name SqlServer -AllowClobber -Verbose
 
 build: false
 before_test:
