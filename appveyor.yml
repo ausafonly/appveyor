@@ -8,3 +8,4 @@ install:
 build: false
 before_test:
   - ps: $env:COMPUTERNAME
+  - ps: Get-Command -Module SqlServer
