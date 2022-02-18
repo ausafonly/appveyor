@@ -1,3 +1,10 @@
-branches:
-  only:
-    - master
+image: Visual Studio 2019
+services:
+  - SQL2019
+install:
+  - ps: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+  - ps: Install-Module -Name SqlServer -AllowClobber
+
+build: false
+before_test:
+  - ps: $env:COMPUTERNAME
