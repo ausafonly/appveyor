@@ -3,9 +3,9 @@ services:
   - iis
 install:
   - ps: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-  - ps: Install-Module -Name SqlServer -AllowClobber
+  - ps: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 build: false
 before_test:
   - ps: $env:COMPUTERNAME
-  - ps: Get-Command -Module SqlServer
+  - ps: choco outdated
