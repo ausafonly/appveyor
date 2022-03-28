@@ -1,8 +1,13 @@
-image: Visual Studio 2019
-services:
-  - iis
-install:
-  - ps: .\build.ps1 -ResolveDependency
-  - ps: Install-Module -Name SqlServer -AllowClobber
+os: WMF 5
 
 build: false
+
+test_script:
+  - ps: . .\.build.ps1 -ResolveDependency
+
+environment:
+  NuGetApiKey:
+    secure: Wt2Q6bJg+ozZ24LUyGSlYaj1RDpfh+A4s7JhKfqhY2KfbU30rv5EmgnJptiRlXWL
+
+skip_commits:
+  message: /updated doc.*|update doc.*s/
