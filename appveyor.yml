@@ -2,10 +2,7 @@ image: Visual Studio 2019
 services:
   - iis
 install:
-  - ps: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted -Verbose
+  - ps: .\build.ps1 -ResolveDependency
   - ps: Install-Module -Name SqlServer -AllowClobber
 
 build: false
-before_test:
-  - ps: $env:COMPUTERNAME
-  - ps: choco install notepadplusplus -y
