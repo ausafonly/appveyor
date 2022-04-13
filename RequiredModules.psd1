@@ -24,6 +24,7 @@
     Configuration                = 'latest'
     Metadata                     = 'latest'
     xDscResourceDesigner         = 'latest'
+    Sampler                      = 'latest'
 
 
     # DSC Resources
