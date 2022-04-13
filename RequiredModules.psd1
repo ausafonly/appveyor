@@ -25,6 +25,7 @@
     Metadata                     = 'latest'
     xDscResourceDesigner         = 'latest'
     Sampler                      = 'latest'
+    Sampler.GitHubTasks          = 'latest'
 
 
     # DSC Resources
