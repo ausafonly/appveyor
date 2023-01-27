@@ -4,6 +4,7 @@ image:
 build: false
 
 test_script:
+  - ps: Install-Module Datum -Verbose
   - ps: . .\build.ps1 -ResolveDependency
 
 environment:
