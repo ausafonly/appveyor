@@ -1,10 +1,10 @@
 image:
-  - Windows Server 2012 R2
+  - Windows PowerShell 5.1
 
 build: false
 
 test_script:
-  - ps: . .\build.ps1
+  - ps: . .\build.ps1 -ResolveDependency
 
 environment:
   NuGetApiKey:
